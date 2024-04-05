@@ -22,7 +22,7 @@
         .background{
             position: absolute;
             background: url(./bg.gif);
-            opacity: 0.2;
+            opacity: 0;
             z-index: 9;
             width: 100%;
             height: 100%;
@@ -52,7 +52,7 @@
             background: url(heart.png);
             background-size: cover;
             animation: moveShape 1s linear infinite;
-            opacity: 0.5;
+            opacity: 0.4;
         }
 
         @keyframes moveShape {
@@ -62,6 +62,12 @@
             100%{
                 transform: translate(300px) rotate(360deg);
             }
+        }
+
+        .audio{
+            position: relative;
+            z-index: 9;
+            opacity: 0.2;
         }
     </style>
 </head>
@@ -84,10 +90,10 @@
             let y = e.offsetY;
 
             let size = Math.random() * 10;
-            heart.style.width = 20 + size + "px";
-            heart.style.height = 20 + size + "px";
+            heart.style.width = 15 + size + "px";
+            heart.style.height = 15 + size + "px";
 
-            let transformValue = Math.random() * 360;
+            let transformValue = Math.random() * 180;
             heart.style.transform = 'rotate('+transformValue+'deg)'
 
             heart.style.left = x + 'px';
